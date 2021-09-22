@@ -1,0 +1,53 @@
+/*=====================*/
+/* BROWSER RESET       */
+/*=====================*/
+*,
+*::before,
+*::after {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+/*=====================*/
+/* MAIN                */
+/*=====================*/
+main {
+  align-items: center;
+  background: gray;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+section {
+  background: white;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "chart"
+    "footer";
+  height: 40rem;
+  padding: 1rem;
+  width: 50rem;
+}
+
+#title {
+  grid-area: header;
+  text-align: center;
+  height: auto;
+}
+
+#chart {
+  grid-area: chart;
+}
+
+#footer {
+  grid-area: footer;
+}
