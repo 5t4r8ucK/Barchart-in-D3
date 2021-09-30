@@ -33,19 +33,23 @@ section {
     "header"
     "chart"
     "footer";
-  height: 40rem;
+  height: auto;
   padding: 1rem;
-  width: 50rem;
+  width: auto;
 }
 
 #title {
   grid-area: header;
   text-align: center;
   height: auto;
+  line-height: 3rem;
+  min-height: 3rem;
 }
 
 #chart {
   grid-area: chart;
+  height: 40rem;
+  width: 60rem;
 }
 
 #footer {

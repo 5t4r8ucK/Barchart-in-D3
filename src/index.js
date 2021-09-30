@@ -9,10 +9,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const convertRemToPixels = (rem) =>
       rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
 
+    // Chart properties
+    const chart = document.querySelector("#chart");
+    const cssWidth = chart.offsetWidth;
+    const cssHeight = chart.offsetHeight;
+
     // Specs of the SVG canvas
-    const width = convertRemToPixels(48); // CSS width (50) - CSS left + right padding (2)
-    const height = convertRemToPixels(38); // CSS height (40) - CSS top + bottom padding (2)
-    const padding = convertRemToPixels(3); // SVG padding for axis
+    const width = cssWidth;
+    const height = cssHeight;
+    const padding = convertRemToPixels(3); // padding for the axes
     const svg = d3
       .select("#chart")
       .append("svg")
